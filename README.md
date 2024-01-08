@@ -47,7 +47,23 @@ To package apps for the local platform:
 ```bash
 npm run package
 ```
+if issue:
+Run as Administrator:
+Try running your command prompt or terminal as an administrator to ensure you have the necessary permissions.
 
+Clear NPM Cache:
+Clear the npm cache by running the following command:
+
+**npm cache clean -f**
+Retry the Installation:
+After clearing the cache, try running the installation command again:
+**npm install**
+Update Node.js and NPM:
+Make sure you are using the latest version of Node.js and NPM. You can update them using:
+**npm install -g npm@latest**
+Configure SSL Certificate:
+If the issue persists, there might be a problem with SSL certificate verification. You can try configuring npm to use a different registry without SSL. Run the following commands:
+**npm config set registry http://registry.npmjs.org/**
 ## Docs
 
 See our [docs and guides here](https://electron-react-boilerplate.js.org/docs/installation)
